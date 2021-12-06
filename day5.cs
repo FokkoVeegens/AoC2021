@@ -10,12 +10,7 @@ namespace AdventOfCode
     {
         public static int Run(string filePath)
         {
-            string input = string.Empty;
-            using (StreamReader sr = new StreamReader(filePath))
-            {
-                input = sr.ReadToEnd();
-                sr.Close();
-            }
+            string input = common.GetInput(filePath);
 
             int[,] matrix = new int[1000, 1000];
             foreach (string line in input.Split(Environment.NewLine))
