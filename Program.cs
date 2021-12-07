@@ -1,22 +1,28 @@
-﻿string day = "6";
-string path = @"C:\Users\fokkov\OneDrive - Delta-N\Desktop\testinput.txt";
+﻿string day = "7";
+string path = @"C:\Users\fokkov\OneDrive - Delta-N\Desktop\input.txt";
 
 if (!File.Exists(path))
 {
     Console.WriteLine("File not found");
 }
 
-int result = -1;
+int result1 = -1;
+int result2 = -1;
 switch (day)
 {
     case "5":
-        result = AdventOfCode.day5.Run(path);
+        result1 = AdventOfCode.day5.Run(path);
         break;
     case "6":
-        result = AdventOfCode.day6.Run(path);
+        result1 = AdventOfCode.day6.Run(path);
+        break;
+    case "7":
+        result1 = AdventOfCode.day7.Run1(path);
+        result2 = AdventOfCode.day7.Run2(path);
         break;
     default:
         break;
 }
 
-Console.WriteLine(result.ToString());
+Console.WriteLine(result1.ToString());
+Console.WriteLine(result2.ToString());
