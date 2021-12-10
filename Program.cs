@@ -1,4 +1,4 @@
-﻿string day = "9";
+﻿string day = "10";
 string path = @"C:\Users\fokkov\OneDrive - Delta-N\Desktop\input.txt";
 
 if (!File.Exists(path))
@@ -7,7 +7,7 @@ if (!File.Exists(path))
 }
 
 int result1 = -1;
-int result2 = -1;
+long result2 = -1;
 switch (day)
 {
     case "5":
@@ -27,6 +27,10 @@ switch (day)
     case "9":
         // result1 solved in Excel
         result2 = AdventOfCode.day9.Run2(path);
+        break;
+    case "10":
+        result1 = AdventOfCode.day10.Run1(path);
+        result2 = AdventOfCode.day10.Run2(path);
         break;
     default:
         break;
