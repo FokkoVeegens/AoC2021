@@ -1,4 +1,4 @@
-﻿string day = "10";
+﻿string day = "11";
 string path = @"C:\Users\fokkov\OneDrive - Delta-N\Desktop\input.txt";
 
 if (!File.Exists(path))
@@ -7,7 +7,8 @@ if (!File.Exists(path))
 }
 
 int result1 = -1;
-long result2 = -1;
+int result2 = -1;
+long result2long = -1;
 switch (day)
 {
     case "5":
@@ -30,7 +31,11 @@ switch (day)
         break;
     case "10":
         result1 = AdventOfCode.day10.Run1(path);
-        result2 = AdventOfCode.day10.Run2(path);
+        result2long = AdventOfCode.day10.Run2(path);
+        break;
+    case "11":
+        result1 = AdventOfCode.day11.Run1(path);
+        result2 = AdventOfCode.day11.Run2(path);
         break;
     default:
         break;
@@ -38,3 +43,4 @@ switch (day)
 
 Console.WriteLine(result1.ToString());
 Console.WriteLine(result2.ToString());
+Console.WriteLine(result2long.ToString());
